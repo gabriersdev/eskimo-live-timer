@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Live do ESKIMO</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+  <script type="text/javascript"
+    src="http://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=NELnwWJmLPnR0SQG3Si2VNXK-veruGL-H7r0DLmTFhCiZDahHTF19u3Kn0EwGr4V"
+    charset="UTF-8"></script>
+</head>
+
+<body">
+
+
+
+  <div class="container">
+
+    <div class='title'>
+
+      <h1>ESKIMOZIN</h1>
+
+      <p id="proxima-live"></p>
+
+    </div>
+
+
+
+    <div class="countdown">
+
+      <div>
+
+        <h1 id="dias">00</h1>
+
+        <p class="legenda legenda-dias">Dias</p>
+
+      </div>
+
+      <div>
+
+        <h1 id="horas">00</h1>
+
+        <p class="legenda legenda-horas">Horas</p>
+
+      </div>
+
+      <div>
+
+        <h1 id="minutos">00</h1>
+
+        <p class="legenda legenda-minutos">Minutos</p>
+
+      </div>
+
+      <div>
+
+        <h1 id="segundos">00</h1>
+
+        <p class="legenda legenda-segundos">Segundos</p>
+
+      </div>
+
+    </div>
+
+
+
+    <div class="info">
+
+      <p id=""></p>
+
+    </div>
+
+
+
+    <a href="https://twitch.tv/eskimozin" target="_blank" rel="noopener noreferrer">
+
+      <div class='button'>
+
+        <p id="texto-botao">Ir para a Twitch</p>
+
+      </div>
+
+    </a>
+
+  </div>
+
+
+
+  <script src="script.js"></script>
+
+  <!-- Code injected by live-server -->
+  <script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
+  </body>
+
+</html>
